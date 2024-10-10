@@ -92,43 +92,90 @@ h1 {
     position: relative;
     width: 100%;
     max-width: 350px;
-    height: 70px;
+    height: 50px;
     background-image: url(../img/button.png); 
     background-size: cover;
     background-position: center;
-    border-radius: 10px;
+    border-radius: 15px;
     margin-top: 10px;
     text-align: center;
     text-decoration: none;
     color: white;
     font-size: 16px;
     font-weight: bold;
-    line-height: 60px; 
+    line-height: normal;
     overflow: hidden;
-    line-height: normal; 
-    overflow: hidden;
+    box-shadow: 0 0 6px 1px rgba(28, 207, 0, 0.564);
 }
 
+/* Контейнер для текста и иконки */
 .eco-text-container {
     padding: 0 15px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     height: 100%;
     text-align: center;
     overflow: hidden;
-    text-overflow: ellipsis; 
+    text-overflow: ellipsis;
+    gap: 10px; 
 }
 
+/* Иконка */
+.icon-alfabank {
+    width: 24px;
+    height: auto;
+    border-radius: 0!important;
+}
+
+/* Текст внутри кнопки */
 .eco-button span {
-    position: relative;
-    z-index: 1;
     font-size: 14px;
     display: inline-block;
     padding: 0;
+    line-height: 1.5; /* Выравнивание по вертикали */
 }
 
+/* Скрытый прямоугольник с текстом */
+.hidden-content {
+    height: 0;
+    width: 93%;
+    margin-left: auto; /* Центрируем по горизонтали */
+    margin-right: auto; 
+    opacity: 0;
+    overflow: hidden;
+    transition: height 0.5s ease-out, opacity 0.5s ease-out; /* Плавная анимация */
+    background-color: rgb(236, 39, 17);
+    color: #ffffff;
+    margin-top: 0px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-bottom-left-radius: 20px; /* Округляем только нижние углы */
+    border-bottom-right-radius: 20px;
+    box-sizing: border-box;
+}
 
+/* Когда блок открыт */
+.hidden-content.show {
+    height: auto;
+    opacity: 1;
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+
+/* Кнопка "Дополнительно" */
+.more-info-button {
+    display: inline-block;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 10px;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
 
 
 .price-container {
