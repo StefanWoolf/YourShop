@@ -38,34 +38,29 @@ const ecoMessages5 = [
 function changeMessage(ecoTextElement, messages) {
     let currentMessageIndex = 0;
   
-    // Ensure that the element is positioned relatively for sliding effect
     ecoTextElement.style.position = "relative";
-    ecoTextElement.style.transition = "transform 1s ease-in-out"; // Smooth transition for the sliding effect
+    ecoTextElement.style.transition = "transform 1s ease-in-out"; 
   
     function updateMessage() {
-      // Slide the element up out of view
       ecoTextElement.style.transform = "translateY(-250%)";
   
       setTimeout(() => {
-        // Update the message content and reset the element below the view
         ecoTextElement.textContent = messages[currentMessageIndex];
         currentMessageIndex = (currentMessageIndex + 1) % messages.length;
         ecoTextElement.style.opacity = "0";
   
-        // Move the element below the visible area without animation
-        ecoTextElement.style.transition = "none"; // Disable transition for reset
+        ecoTextElement.style.transition = "none"; 
         ecoTextElement.style.transform = "translateY(300%)";
   
-        // Short delay before moving the element back into view
         setTimeout(() => {
-          ecoTextElement.style.transition = "transform 1s ease-in-out"; // Re-enable transition
-          ecoTextElement.style.transform = "translateY(0)"; // Slide back into view
-          ecoTextElement.style.opacity = "1"; // Fade in effect
-        }, 100); // Short delay for transition reset to take effect
-      }, 600); // Delay for slide-out transition to complete
+          ecoTextElement.style.transition = "transform 1s ease-in-out"; 
+          ecoTextElement.style.transform = "translateY(0)";
+          ecoTextElement.style.opacity = "1";
+        }, 100); 
+      }, 600); 
     }
   
-    setInterval(updateMessage, 4000); // Run the update every 4 seconds
+    setInterval(updateMessage, 4000); 
   }
   
   const ecoText1 = document.getElementById("eco-text-1");
@@ -76,9 +71,9 @@ function changeMessage(ecoTextElement, messages) {
   
   changeMessage(ecoText1, ecoMessages1); //Для первого продукта
   changeMessage(ecoText2, ecoMessages2); //Для второго продукта
-  changeMessage(ecoText3, ecoMessages3); //Для третьего продукта
-  changeMessage(ecoText4, ecoMessages4); //Для четвертого продукта
-  changeMessage(ecoText5, ecoMessages5); //Для пятого продукта
+  changeMessage(ecoText3, ecoMessages3); 
+  changeMessage(ecoText4, ecoMessages4); 
+  changeMessage(ecoText5, ecoMessages5); 
   
   
 
@@ -94,7 +89,7 @@ function toggleContent(buttonId, contentId) {
             hiddenContent.style.height = hiddenContent.scrollHeight + 'px';
             setTimeout(() => {
                 hiddenContent.style.height = '0';
-                hiddenContent.style.opacity = '0'; // Плавно скрываем
+                hiddenContent.style.opacity = '0'; 
             }, 10);
 
             setTimeout(() => {
