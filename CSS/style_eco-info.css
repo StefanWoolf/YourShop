@@ -138,7 +138,7 @@ h1 {
     position: relative;
     text-align: center;
     color: white;
-    margin-bottom: -20px;
+    margin-bottom: 20px;
 }
 
 .image-banner img {
@@ -155,46 +155,6 @@ h1 {
     transform: translate(-50%, -50%);
     text-align: center;
     width: 80%; 
-}
-
-
-.text-icon-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px; 
-    border-radius: 0px!important;
-}
-
-.text-icon-container p {
-    font-size: 16px;
-    margin: 0;
-    text-align: left;
-    margin-bottom: 5px;
-}
-
-.text-icon-container .icon {
-    width: 25px!important;
-    height: auto;
-    margin-bottom: -5px
-}
-
-.overlay-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-
-.overlay-text h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.overlay-text .icon {
-    width: 50px;
-    height: auto;
 }
 
 .price-container {
@@ -223,7 +183,8 @@ h1 {
 .content h2 {
     color: #000000;
     font-size: 26px;
-    margin-bottom: -5px;
+    margin: -20px;
+    padding: 0;
 }
 
 .content p {
